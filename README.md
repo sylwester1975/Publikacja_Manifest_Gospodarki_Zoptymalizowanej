@@ -1,0 +1,1 @@
+# Publikacja_Manifest_Gospodarki_Zoptymalizowanej
