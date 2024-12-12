@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel pobierania</title>
+<style>
+    body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #000;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 800px;
+        margin: 30px auto;
+        background-color: #fff;
+        padding: 10px 40px 60px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+
+    header h1 {
+        font-size: 1.4em;
+        color: #000;
+        margin-bottom: 15px;
+        text-align: left; 
+    }
+
+    header h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    section h2 {
+        font-size: 1em;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    .download-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 5px;
+        background-color: #f9f9f9;
+        border: 1px solid #808080;
+        border-radius: 5px;
+    }
+
+    .download-item span {
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+
+    button {
+        background-color: #B51200;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 110px; 
+        height: 40px; 
+    }
+
+    button:hover {
+        background-color: #9b0f00;
+    }
+
+    button:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+    }
+
+    .blue-button {
+        background-color: #0012b5;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 110px; 
+        height: 40px; 
+    }
+
+    .blue-button:hover {
+        background-color: #000a80;
+    }
+
+    textarea {
+        width: 100%;
+        height: 60px;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-family: monospace;
+        font-size: 1em;
+        border: 1px solid #808080;
+        border-radius: 5px;
+        resize: none;
+        box-sizing: border-box;
+    }
+
+    .close-button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: #0e0e0e;
+        color: #eeeeee;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 40px; 
+    }
+
+    .close-button:hover {
+        background-color: #f19c01;
+    }
+
+    button[aria-label="Skopiuj kod osadzania"] {
+        padding: 10px 20px; 
+        font-size: 1em; 
+        font-weight: 600; 
+        height: 40px; 
+        border-radius: 5px; 
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center; 
+        align-items: center; 
+        white-space: nowrap; 
+        min-width: 220px; 
+        background-color: #B51200; 
+        color: #fff; 
+        border: none; 
+    }
+
+    button[aria-label="Skopiuj kod osadzania"]:hover {
+        background-color: #9b0f00; 
+    }
+</style>
+</head>
+
+<body style="color: rgb(45, 45, 45); background-color: rgb(69, 69, 69);">
+    <div class="container">
+        <header>
+                 <!-- Nagłówek panelu pobierania -->
+                 <h1><span style="font-size: 20px;">Panel pobierania e-broszury i kodu osadzania:<br>Manifest Gospodarki Zoptymalizowanej</span></h1>
+                 <h2><br></h2>
+                 <h2><span style="font-size: 18px;">Pobierz e-broszurę</span></h2>
+        </header>
+        <main>
+            <section class="download-section">
+                 <p><strong><span style="font-size: 15px;">Wybierz format:</span></strong></p>
+                
+                 <!-- Przycisk dla wersji HTML -->            
+                 <div class="download-item"><span style="font-size: 16px;"><strong>HTML</strong></span> <button aria-label="Pobierz wersję HTML" onclick="window.location.href='';">Pobierz</button></div>
+
+                 <!-- Niebieski przycisk alternatywnego panelu pobierania dla wersji HTML – „Panel” -->
+<p><strong><span style="font-size: 15px;">Jeśli format HTML nie zostanie pobrany za pomocą pierwszego przycisku, przejdź<br>do alternatywnego panelu pobierania, klikając poniżej w niebieski przycisk „Panel”:</span></strong></p>                
+                 <div class="download-item">
+                 <span style="font-size: 16px;"><strong>HTML (alternatywny panel pobierania)</strong></span>
+                 <button class="blue-button" aria-label="HTML (alternatywny panel pobierania)" 
+                 onclick="window.location.href='';">Panel</button></div>
+
+  <!-- Formaty opcjonalne -->
+
+                <!-- Przycisk dla wersji EXE -->
+                <div class="download-item"><span style="font-size: 16px;"><strong>EXE</strong></span> <button aria-label="Pobierz wersję EXE" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1KWQGlEFYGM3u5fVIyJM0uKMcJo1MMacX';">Pobierz</button></div>
+
+                <!-- Przycisk dla wersji EXE (antywirus) -->
+                <div class="download-item"><span style="font-size: 16px;"><strong>EXE (antywirus)</strong></span> <button aria-label="Pobierz wersję EXE z antywirusem" onclick="window.location.href='ttps://drive.google.com/uc?export=download&id=1GS7Ndbje27ADn_zvz-_pZS-A4amwGtAN';">Pobierz</button></div>
+
+                <!-- Przycisk dla aplikacji na Maca -->
+                <div class="download-item"><span style="font-size: 16px;"><strong>Aplikacja na Maca</strong></span> <button aria-label="Pobierz aplikację na Maca" onclick="window.location.href='https://drive.google.com/uc?export=download&id=11YMRiWWlMC1_QptE3BKMDv8qVUYPT--5';">Pobierz</button></div>
+
+                <!-- Przycisk dla oryginalnego pliku PDF -->
+                <div class="download-item"><span style="font-size: 16px;"><strong>Oryginalny plik PDF plus grafiki z ich opisami</strong></span> <button aria-label="Pobierz PDF i grafiki z opisami" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1EBdtsHdV3sGjbTGYfOI3FTFU2s2Zlo-U';">Pobierz</button></div>
+
+  <!-- Koniec formatów opcjonalnych -->
+
+                 <!-- Przycisk pobierania projektu na swój serwer -->
+<p><strong><span style="font-size: 15px;">Pobierz projekt lub jego część na swój serwer:</span></strong></p> 
+                 <div class="download-item"><span style="font-size: 16px;"><strong>HTML i plik panel-pobierania.html z instrukcją w jego edytorze kodu</strong></span> <button aria-label="Pobierz wersję HTML i panel pobierania" onclick="window.location.href='https://drive.google.com/uc?export=download&id=1mXDenUyoZmlQ-u9DOqQu4JFOBAAuHcVR';">Pobierz</button></div> 
+            </section> 
+
+            <section class="code-section">
+                 <h2><br></h2>
+                 <h2><span style="font-size: 18px;">Pobierz kod osadzania</span></h2>
+                 <p><strong><span style="font-size: 15px;">Skopiuj poniższy kod osadzania i wklej go do kodu HTML swojej strony, aby umieścić<br>na niej e-broszurę:</span></strong></p>
+                 <!-- Obszar tekstowy dla kodu osadzania -->
+                 <textarea readonly id="embed-code"></textarea>
+                 <!-- Przycisk kopiowania kodu osadzania -->
+                 <button aria-label="Skopiuj kod osadzania" onclick="copyEmbedCode()">Kopiuj kod osadzania</button>
+            </section>
+                 <!-- Przycisk zamknięcia -->
+                 <button class="close-button" onclick="closeWindow()">Zamknij</button>
+        </main>
+    </div>
+
+    <script>
+        var currentFlipbookUrl = window.location.href.split("panel-pobierania.html")[0];
+
+        var embedCode = `<div style="position:relative;width:100%;padding-top:56.25%;"><iframe src="${currentFlipbookUrl}" style="position:absolute;width:100%;height:100%;border:none;top:0;left:0;" allowtransparency="true" allowfullscreen="true"></iframe></div>`;
+        document.getElementById("embed-code").value = embedCode;
+
+        function copyEmbedCode() {
+            var copyText = document.getElementById("embed-code").value;
+            navigator.clipboard.writeText(copyText).then(() => {
+                alert("Kod osadzania skopiowany!");
+            }).catch(err => {
+                alert("Błąd przy kopiowaniu kodu: " + err);
+            });
+        }
+
+        function closeWindow() {
+            window.close();
+        }
+    </script>
+</body>
+
+</html>
